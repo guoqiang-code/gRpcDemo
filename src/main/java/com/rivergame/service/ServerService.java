@@ -9,6 +9,7 @@ import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
 import java.io.IOException;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * @author： guoqiang@rivergame.net
@@ -17,6 +18,8 @@ import java.io.IOException;
  * @version: 1.0
  */
 public class ServerService {
+    private static CountDownLatch latch = new CountDownLatch(1);
+
     public static void main(String[] args) throws Exception {
         //指定grpc服务器端口、接口服务对象，启动grpc服务器
         Server server = ServerBuilder.forPort(10001).addService(new GreeterImpl())
@@ -33,6 +36,8 @@ public class ServerService {
         if (server != null) {
             server.awaitTermination();
         }
+        //也可以让进程等待
+//        latch.await();
     }
 
     private static class GreeterImpl extends HelloGrpc.HelloImplBase {
