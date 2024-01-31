@@ -32,7 +32,7 @@ public final class WuyuGRpc {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\rrpcDemo.proto\"\034\n\014HelloRequest\022\014\n\004name\030" +
       "\001 \001(\t\" \n\rHelloResponse\022\017\n\007message\030\001 \001(\t2" +
       "4\n\005Hello\022+\n\010sayHello\022\r.HelloRequest\032\016.He" +
@@ -48,13 +48,13 @@ public final class WuyuGRpc {
     internal_static_HelloRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HelloRequest_descriptor,
-        new java.lang.String[] { "Name", });
+        new String[] { "Name", });
     internal_static_HelloResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_HelloResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HelloResponse_descriptor,
-        new java.lang.String[] { "Message", });
+        new String[] { "Message", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

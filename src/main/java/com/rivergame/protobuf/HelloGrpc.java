@@ -15,7 +15,7 @@ public final class HelloGrpc {
 
   private HelloGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "Hello";
+  public static final String SERVICE_NAME = "Hello";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.rivergame.protobuf.HelloRequest,
@@ -55,7 +55,7 @@ public final class HelloGrpc {
   public static HelloStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<HelloStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<HelloStub>() {
-        @java.lang.Override
+        @Override
         public HelloStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new HelloStub(channel, callOptions);
         }
@@ -70,7 +70,7 @@ public final class HelloGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<HelloBlockingStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<HelloBlockingStub>() {
-        @java.lang.Override
+        @Override
         public HelloBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new HelloBlockingStub(channel, callOptions);
         }
@@ -85,7 +85,7 @@ public final class HelloGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<HelloFutureStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<HelloFutureStub>() {
-        @java.lang.Override
+        @Override
         public HelloFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new HelloFutureStub(channel, callOptions);
         }
@@ -117,7 +117,7 @@ public final class HelloGrpc {
   public static abstract class HelloImplBase
       implements io.grpc.BindableService, AsyncService {
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+    @Override public final io.grpc.ServerServiceDefinition bindService() {
       return HelloGrpc.bindService(this);
     }
   }
@@ -135,7 +135,7 @@ public final class HelloGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected HelloStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HelloStub(channel, callOptions);
@@ -163,7 +163,7 @@ public final class HelloGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected HelloBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HelloBlockingStub(channel, callOptions);
@@ -190,7 +190,7 @@ public final class HelloGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected HelloFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new HelloFutureStub(channel, callOptions);
@@ -220,8 +220,8 @@ public final class HelloGrpc {
       this.methodId = methodId;
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_HELLO:
@@ -233,8 +233,8 @@ public final class HelloGrpc {
       }
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -260,12 +260,12 @@ public final class HelloGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     HelloBaseDescriptorSupplier() {}
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
       return com.rivergame.protobuf.WuyuGRpc.getDescriptor();
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("Hello");
     }
@@ -279,13 +279,13 @@ public final class HelloGrpc {
   private static final class HelloMethodDescriptorSupplier
       extends HelloBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
+    private final String methodName;
 
-    HelloMethodDescriptorSupplier(java.lang.String methodName) {
+    HelloMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }
