@@ -1,5 +1,5 @@
 syntax = "proto3"; // 定义语法类型
-option java_package = "com.rivergame.protobuf";
+option java_package = "com.rivergame.protobuf.hello";
 option java_multiple_files = true;
 option java_outer_classname = "WuyuGRpc";
 

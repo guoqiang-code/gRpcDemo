@@ -1,0 +1,17 @@
+syntax = "proto3"; // 定义语法类型
+option java_package = "com.rivergame.protobuf.hi";
+option java_multiple_files = true;
+option java_outer_classname = "WuyuGRpc";
+
+
+service Hi {  // 定义服务
+  rpc sayHello(HiRequest) returns(HiResponse) {}
+}
+
+message HiRequest { // 定义请求的消息体
+  string name = 1;
+}
+
+message HiResponse { // 定义回复的消息体
+  string message = 1;
+}
